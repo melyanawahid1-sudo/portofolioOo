@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portofolio PKL – Siswa TKJ</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff5f7;--card:#ffffff;--ink:#4a2c3a;--mute:#8d6676;--pink:#f4a6bd;--pink2:#fbd3de;--rose:#d9638a;--line:#f6dbe4;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a1820;--card:#3a2230;--ink:#ffe9ef;--mute:#d3a9b8;--pink:#e58aa8;--pink2:#5a3445;--rose:#ff9bbb;--line:#4d2f3d}}
+:root[data-theme="dark"]{--bg:#2a1820;--card:#3a2230;--ink:#ffe9ef;--mute:#d3a9b8;--pink:#e58aa8;--pink2:#5a3445;--rose:#ff9bbb;--line:#4d2f3d}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Nunito',system-ui,sans-serif;line-height:1.7;overflow-x:hidden}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;line-height:1.2;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+nav b{font-family:'Fraunces',serif;font-size:1.15rem;color:var(--rose)}
+nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;flex-wrap:wrap;font-weight:600;font-size:.95rem}
+nav a{text-decoration:none;color:var(--mute)}nav a:hover{color:var(--rose)}
+.hero{padding:56px 0 40px}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,6vw,3.8rem);font-weight:700}
+.hero h1 em{font-style:italic;color:var(--rose)}
+.hero p{color:var(--mute);font-size:1.08rem;max-width:46ch}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-block;padding:12px 26px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--pink);transition:.2s}
+.btn.main{background:var(--pink);color:#4a2c3a}.btn.main:hover{background:var(--rose);color:#fff;border-color:var(--rose)}
+.btn.ghost:hover{background:var(--pink2)}
+.photo{position:relative;justify-self:center;width:min(320px,80vw);aspect-ratio:4/5}
+.photo::before{content:"";position:absolute;inset:-14px;border-radius:48% 52% 46% 54%/55% 45% 55% 45%;background:var(--pink2);transform:rotate(-6deg)}
+.frame{position:relative;width:100%;height:100%;border-radius:46% 54% 44% 56%/52% 46% 54% 48%;overflow:hidden;background:var(--card);border:6px solid var(--card);box-shadow:0 18px 40px rgba(217,99,138,.25);display:grid;place-items:center;text-align:center;color:var(--mute);cursor:pointer}
+.frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none}
+.frame.has img{display:block}.frame.has span{display:none}
+.frame span{padding:20px;font-weight:600;font-size:.95rem}
+.frame span b{display:block;font-size:2rem}
+section{padding:48px 0}
+h2{font-size:clamp(1.7rem,4vw,2.3rem);margin-bottom:8px}
+.sub{color:var(--mute);margin:0 0 28px;max-width:60ch}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px}
+.card h3{font-size:1.15rem;margin-bottom:6px}
+.card p{margin:0;color:var(--mute);font-size:.97rem}
+.card .ic{font-size:1.8rem}
+.skills{display:flex;flex-wrap:wrap;gap:10px}
+.chip{background:var(--pink2);padding:8px 16px;border-radius:999px;font-weight:700;font-size:.92rem}
+.steps{list-style:none;margin:0;padding:0 0 0 22px;border-left:3px dashed var(--pink)}
+.steps li{position:relative;padding:0 0 26px 22px}
+.steps li::before{content:"";position:absolute;left:-31px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--rose);border:3px solid var(--bg)}
+.steps h3{font-size:1.1rem}.steps p{margin:2px 0 0;color:var(--mute)}
+.tgt .card{display:flex;gap:14px;align-items:flex-start}
+.tgt .ic{background:var(--pink2);border-radius:14px;width:46px;height:46px;display:grid;place-items:center;font-size:1.4rem;flex:none}
+.contact{background:var(--pink2);border-radius:32px;padding:40px 24px;text-align:center}
+.contact p{max-width:48ch;margin:0 auto 22px;color:var(--mute)}
+footer{text-align:center;padding:30px 20px 40px;color:var(--mute);font-size:.9rem}
+#theme{background:none;border:1.5px solid var(--pink);border-radius:999px;padding:6px 14px;cursor:pointer;color:var(--ink);font:inherit;font-weight:600}
+@media(max-width:760px){.hero .wrap{grid-template-columns:1fr;text-align:center}.hero p{margin:0 auto}.btns{justify-content:center}.photo{order:-1}nav ul{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>✿ Portofolio PKL</b>
+<ul><li><a href="#tentang">Tentang</a></li><li><a href="#skill">Keahlian</a></li><li><a href="#tujuan">Tempat PKL</a></li><li><a href="#langkah">Proses</a></li><li><a href="#kontak">Kontak</a></li></ul>
+<button id="theme" aria-label="Ganti tema terang atau gelap">🌙</button></div></nav>
+
+<header class="hero"><div class="wrap">
+<div>
+<h1>Halo, saya <em>Melyana Wahid</em>, siswa TKJ yang sedang mencari tempat PKL.</h1>
+<p>Saya belajar jaringan, server, dan perangkat komputer. Sekarang saya ingin menerapkannya langsung di dunia kerja yang nyata.</p>
+<div class="btns"><a class="btn main" href="#kontak">Hubungi saya</a><a class="btn ghost" href="#skill">Lihat keahlian</a></div>
+</div>
+<div class="photo"><label class="frame" id="frame" tabindex="0" title="Klik untuk memasang foto">
+<img id="pic" alt="Foto saya"><span><b>📷</b>Klik di sini untuk memasang fotomu</span>
+<input type="file" id="file" accept="image/*" hidden></label></div>
+</div></header>
+
+<main class="wrap">
+<section id="tentang"><h2>Tentang saya</h2>
+<p class="sub">Siswa kelas XI Teknik Komputer dan Jaringan di SMK GLOBAL PERSADA. Saya suka merakit komputer, mengatur jaringan, dan memecahkan masalah koneksi. Saya rajin, mau belajar, dan siap ditempatkan di bagian mana pun.</p>
+<div class="grid">
+<div class="card"><div class="ic">🎓</div><h3>Sekolah</h3><p>SMK GLOBAL PERSADA, jurusan TKJ</p></div>
+<div class="card"><div class="ic">📅</div><h3>Periode PKL</h3><p>[bulan] – [bulan] 2026, sekitar 3 – 6 bulan</p></div>
+<div class="card"><div class="ic">📍</div><h3>Lokasi</h3><p>Bekasi dan sekitarnya</p></div>
+</div></section>
+
+<section id="skill"><h2>Keahlian saya</h2>
+<p class="sub">Kemampuan dasar yang sudah saya pelajari dan praktikkan di sekolah.</p>
+<div class="skills">
+<span class="chip">Konfigurasi Mikrotik</span><span class="chip">Cisco Packet Tracer</span><span class="chip">Subnetting IP</span><span class="chip">Kabel UTP &amp; crimping</span><span class="chip">Instalasi Linux</span><span class="chip">Windows Server</span><span class="chip">Merakit &amp; servis PC</span><span class="chip">Troubleshooting jaringan</span><span class="chip">Wi-Fi &amp; access point</span><span class="chip">CCTV dasar</span>
+</div></section>
+
+<section id="tujuan" class="tgt"><h2>Tempat PKL yang saya cari</h2>
+<p class="sub">Saya terbuka pada beberapa jenis tempat, selama ada kesempatan belajar yang nyata.</p>
+<div class="grid">
+<div class="card"><div class="ic">🌐</div><div><h3>Penyedia internet (ISP)</h3><p>Pemasangan, perawatan, dan monitoring jaringan pelanggan.</p></div></div>
+<div class="card"><div class="ic">🏢</div><div><h3>Perusahaan atau kantor</h3><p>Bagian IT support, jaringan kantor, dan server.</p></div></div>
+<div class="card"><div class="ic">🏛️</div><div><h3>Instansi pemerintah</h3><p>Dinas kominfo, kantor, atau unit pelayanan teknologi.</p></div></div>
+<div class="card"><div class="ic">🛠️</div><div><h3>Toko &amp; servis komputer</h3><p>Perakitan, perbaikan, dan instalasi perangkat.</p></div></div>
+</div></section>
+
+<section id="langkah"><h2>Proses pencarian PKL</h2>
+<p class="sub">Langkah yang sedang dan akan saya jalani.</p>
+<ol class="steps">
+<li><h3>Membuat daftar tempat</h3><p>Mengumpulkan perusahaan yang sesuai jurusan dan mudah dijangkau.</p></li>
+<li><h3>Menyiapkan berkas</h3><p>Surat pengantar sekolah, CV, dan portofolio ini.</p></li>
+<li><h3>Mengirim lamaran</h3><p>Datang langsung atau mengirim lewat email dan WhatsApp.</p></li>
+<li><h3>Wawancara dan konfirmasi</h3><p>Menjelaskan tujuan belajar saya dan menyepakati jadwal.</p></li>
+<li><h3>Mulai PKL</h3><p>Belajar, mencatat, dan menyusun laporan akhir.</p></li>
+</ol></section>
+
+<section id="kontak"><div class="contact"><h2>Mari berkenalan</h2>
+<p>Jika Bapak/Ibu membuka kesempatan PKL untuk siswa TKJ, saya senang sekali bisa berdiskusi.</p>
+<div class="btns" style="justify-content:center">
+<a class="btn main" href="mailto:email@melyana.com">email@melyana.com</a>
+<a class="btn ghost" href="https://wa.me/6281234567890">WhatsApp 0878-1543-7789</a></div></div></section>
+</main>
+<footer>Dibuat dengan ♡ oleh Melyana Wahid · Siswa TKJ</footer>
+
+<script>
+var f=document.getElementById('file'),fr=document.getElementById('frame'),p=document.getElementById('pic');
+f.addEventListener('change',function(){var x=f.files[0];if(!x)return;var r=new FileReader();r.onload=function(e){p.src=e.target.result;fr.classList.add('has')};r.readAsDataURL(x)});
+fr.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();f.click()}});
+var t=document.getElementById('theme'),root=document.documentElement;
+t.addEventListener('click',function(){var d=getComputedStyle(root).getPropertyValue('--bg').trim()==='#2a1820';root.setAttribute('data-theme',d?'light':'dark');t.textContent=d?'🌙':'☀️'});
+</script>
+</body>
+</html>
